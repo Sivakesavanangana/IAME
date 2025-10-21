@@ -551,6 +551,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    
 }
 
 /* Display Flex Css Start */
@@ -3170,6 +3171,7 @@ input[type=number] {
 .logo img {
     max-width: 224px;
 }
+
 
 @media screen and (max-width: 767px) {
     .logo img {
@@ -10585,3 +10587,115 @@ input[type=number] {
 }
 /* ========================= Newsletter Section Css End ======================= */
 /*# sourceMappingURL=main.css.map */
+
+
+.custom-products-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr); /* 3 per row on desktop */
+  justify-items: center;
+  padding: 24px;
+  background: #f8fafe;
+}
+
+@media (min-width: 1100px) {
+  .custom-products-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 cards in a row for extra large screens */
+  }
+}
+@media (max-width: 900px) {
+  .custom-products-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablet */
+  }
+}
+@media (max-width: 600px) {
+  .custom-products-grid {
+    grid-template-columns: 1fr; /* 1 card for mobile */
+  }
+}
+
+.product-item {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(67,82,224,0.10);
+  transition: box-shadow 0.33s, transform 0.29s;
+  width: 100%;
+  max-width: 345px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-item:hover {
+  box-shadow: 0 16px 32px rgba(43,64,198,0.17);
+  transform: translateY(-9px) scale(1.02);
+}
+
+.product-item__thumb img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 18px 18px 0 0;
+  transition: transform 0.31s;
+}
+
+.product-item:hover .product-item__thumb img {
+  transform: scale(1.06);
+}
+
+.product-item__content {
+  padding: 1.2rem 1rem 1.1rem 1rem;
+  flex: 1;
+}
+
+.product-item__title a {
+  color: #2b2b2b;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.product-item__title a:hover {
+  color: #4352e0;
+}
+
+.product-item__price {
+  color: #4352e0;
+  font-weight: bold;
+}
+
+.product-item__prevPrice {
+  color: #bbb;
+}
+
+.btn-outline-light {
+  border: 2px solid #e0e8ff;
+  background: #fff;
+  color: #4352e0;
+  border-radius: 30px;
+  transition: background .22s, color .22s;
+}
+
+.btn-outline-light:hover {
+  background: #4352e0;
+  color: #fff;
+}
+
+.product-item__sales {
+  color: #6f72b8;
+  font-size: 1rem;
+}
+
+.star-rating__item i {
+  color: #ffe066;
+}
+
+.star-rating__text {
+  margin-left: 6px;
+  color: #222;
+}
+.common-pagination {
+  display: flex;
+  padding: 1rem 0;
+  gap: 1.5rem;
+}

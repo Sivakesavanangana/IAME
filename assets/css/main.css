@@ -5070,7 +5070,7 @@ input[type=number] {
 /* ======================== popular Section Css End =========================== */
 /* =========================== Product Css Start ========================== */
 .product-item {
-    border-radius: 8px;
+    border-radius: 8px ;
     background-color: hsl(var(--white));
     overflow: hidden;
     transition: 0.2s linear;
@@ -10582,5 +10582,121 @@ input[type=number] {
         padding-right: 60px;
     }
 }
-/* ========================= Newsletter Section Css End ======================= */
-/*# sourceMappingURL=main.css.map */
+.JobSection{
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 900px) {
+    .JobSection{
+    /* display: flex; */
+    width: 100%;
+    margin-bottom: 20px;
+}
+.col-xl-4{
+    /* border: 2px solid green; */
+    /* width: 200px; */
+}
+}
+.col-xl-4{
+    /* border: 2px solid green; */
+    /* width: 400px; */
+}
+
+/* General Image Styling */
+.BoxImage {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/* Container Wrapper */
+.container-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Each Job Box */
+.box {
+  flex: 1 1 calc(33.333% - 40px);
+  background-color: rgb(246, 241, 241);
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  min-width: 250px;
+  max-width: 400px;
+  height: auto;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.box:hover {
+  box-shadow: 4px 5px 10px rgba(0,0,0,0.2);
+}
+
+/* Button Styling */
+.ViewButton {
+  background-color: #544889;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 16px;
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.ViewButton:hover {
+  background-color: #403476;
+}
+
+/* Responsive Typography */
+.box p {
+  color: black;
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+/* Section Heading */
+.JobVacancies {
+  text-align: center;
+  color: rgb(75, 73, 73);
+  font-size: 2rem;
+  margin: 40px 0 20px;
+}
+
+/* ======================= Responsive Media Queries ======================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .box {
+    flex: 1 1 calc(50% - 40px); /* 2 boxes per row */
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+  .box {
+    flex: 1 1 100%; /* 1 per row */
+    max-width: 100%;
+  }
+  .ViewButton {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .box p {
+    font-size: 0.95rem;
+  }
+
+  .JobVacancies {
+    font-size: 1.5rem;
+  }
+}
